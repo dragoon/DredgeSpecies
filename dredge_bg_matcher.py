@@ -40,6 +40,11 @@ def best_matching_background(bg_images, fg):
     best_bg = None
     min_diff = float('inf')
 
+    img_num = os.path.basename(fg.filename).split('-')[1].split('.')[0]
+    # overrides for wrong matches
+    if img_num in ("439", "1110", "1112"):
+        fg_ratio = 1
+
     for bg in bg_images:
         bg_ratio = bg.width / bg.height
         diff = abs(fg_ratio - bg_ratio)
