@@ -42,7 +42,7 @@ def best_matching_background(bg_images, fg):
 
     img_num = os.path.basename(fg.filename).split('-')[1].split('.')[0]
     # overrides for wrong matches
-    if img_num in ("439", "1110", "1112"):
+    if img_num in ("439", "1110", "1112", "2167"):
         fg_ratio = 1
 
     for bg in bg_images:
@@ -58,7 +58,7 @@ def best_matching_background(bg_images, fg):
 
 def overlay_centered(bg, fg):
     # Calculate the ratio to fit the foreground width
-    target_width = bg.width - 60
+    target_width = bg.width - 80
     target_height = bg.height - 60
 
     # Only scale down if the foreground image's width is larger than target_width.
