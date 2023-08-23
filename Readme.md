@@ -50,12 +50,18 @@ Just added a "basic and plentiful" cod as an example:
 So you need to manually move extracted fish images to their respective folders.
 
 ### Background Matching
-Next, I prepared a python script that will accept background and raw image photo directories, and match the fish with background using the closest aspect ratio (it's not perfect but good enough): 
+Next, I prepared a python script that will accept background and raw image photo directories, and match the fish with background using the closest aspect ratio: 
 
 ```shell
 python3 dredge_bg_matcher.py assets/normal_bg assets/normal normal_fish_with_bg
 python3 dredge_bg_matcher.py assets/aberration_bg assets/aberrations abb_fish_with_bg
 ```
+The script is not perfect and some species you will have to manually paste onto the correct background and adjust the size,
+but it works for the majority of species.
+
+#### Fish Shadow
+One thing I noticed is that the extracted images do not have shadow as in the PDF, so I added a method to generate a shadow to this script as well.
+I think it matches the original one pretty well.
 
 After that, you should see the matched and combines photos in the output directories:
 <p align="middle">
