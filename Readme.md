@@ -1,4 +1,8 @@
 ## Dredge Fish Species Notebook
+<p align="middle">
+<img width="500" height="227" src="readme_images/dredge_promo.png"/>
+<img width="155" height="227" src="readme_images/notebook.png"/>
+</p>
 ![Dredge Main](readme_images/dredge_promo.png)
 
 ### Description
