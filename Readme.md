@@ -84,3 +84,6 @@ This turned out to be extremely difficult. For trying things out, I have ordered
 https://www.amazon.de/-/en/gp/product/B09FF7J2B3/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1
 
 The cover is black and soft, but other parameters match well.
+
+Otherwise I am considering this one from Etsy:
+https://www.etsy.com/listing/1158061119/personalised-a4-notebook-printed-with?ref=cart
