@@ -42,7 +42,7 @@ I have already added background directories to this repo:
 </p>
 
 The fish photos are not in this repo for potential copyright reasons.
-Just added a meek cod as an example:
+Just added a "basic and plentiful" cod as an example:
 <p align="middle">
 <img width="320" height="320" src="assets/normal/image-178.png"/>
 <img width="320" height="320" src="assets/aberrations/image-176.png"/>
@@ -62,3 +62,20 @@ After that, you should see the matched and combines photos in the output directo
 <img width="320" height="320" src="assets/normal_fish_with_bg/image-178.png"/>
 <img width="320" height="320" src="assets/abb_fish_with_bg/image-176.png"/>
 </p>
+
+### Photo Printing
+I have used my local photo printing shops (in Switzerland: Migros or ALDI Photos) with the following specs:
+xxx
+Results:
+
+### Notebook
+This is the most difficult part. I had imagined the following specifications:
+* Hardcover
+* Brown/Yellow/Orange cover
+* 40 pages
+* Liner or Blank
+* Yellowish paper
+
+This turned out to be extremely difficult. Currently, I have ordered this one from Amazon:
+https://www.amazon.de/-/en/gp/product/B09FF7J2B3/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1
+The cover is black and soft, but other parameters match well.
