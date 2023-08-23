@@ -77,5 +77,7 @@ This is the most difficult part. I had imagined the following specifications:
 * Yellowish paper
 
 This turned out to be extremely difficult. Currently, I have ordered this one from Amazon:
+![Fish Notebook](readme_images/amazon_40sheet.jpg)
 https://www.amazon.de/-/en/gp/product/B09FF7J2B3/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1
+
 The cover is black and soft, but other parameters match well.
