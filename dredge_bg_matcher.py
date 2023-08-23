@@ -1,6 +1,37 @@
 import sys
-from PIL import Image
+from PIL import Image, ImageFilter, ImageColor
 import os
+
+
+def add_shadow(input_image, offset=(9, 11), shadow_color="#111111A0"):
+    """Add a shadow to an image with a transparent background."""
+
+    # Ensure the image has an alpha layer
+    img_with_alpha = input_image.convert('RGBA')
+
+    # Create a blank transparent image with the size of the input image + offset
+    total_width = input_image.width + abs(offset[0] * 2)  # Extra space for the shadow
+    total_height = input_image.height + abs(offset[1] * 2)
+    new_image = Image.new('RGBA', (total_width, total_height), (0, 0, 0, 0))  # Transparent
+
+    # Position the original image on the new image
+    img_position = (abs(offset[0]) if offset[0] > 0 else 0, abs(offset[1]) if offset[1] > 0 else 0)
+
+    # Create a shadow mask using the alpha channel of the image
+    alpha = img_with_alpha.split()[3]
+    blurred_shadow = alpha.filter(ImageFilter.GaussianBlur(radius=1))
+    # Convert shadow_color from string to tuple
+    r, g, b = ImageColor.getcolor(shadow_color, "RGB")
+    shadow_color_rgba = (r, g, b, 0)  # Append 0 alpha
+
+    shadow_layer = Image.new('RGBA', new_image.size, shadow_color_rgba)  # Use the RGBA tuple
+    shadow_position = (img_position[0] + offset[0], img_position[1] + offset[1])
+    shadow_layer.paste(shadow_color, shadow_position, blurred_shadow)  # Paste using alpha of blurred shadow as mask
+
+    # Paste original image on top of shadow
+    shadow_layer.paste(img_with_alpha, img_position, img_with_alpha)
+
+    return shadow_layer
 
 
 def best_matching_background(bg_images, fg):
@@ -21,8 +52,9 @@ def best_matching_background(bg_images, fg):
 
 
 def overlay_centered(bg, fg):
-    # Calculate the ratio to fit the foreground width to (bg.width - 40)
-    target_width = bg.width - 80
+    # Calculate the ratio to fit the foreground width to (bg.width - 90)
+    target_width = bg.width - 90
+
     # Only scale down if the foreground image's width is larger than target_width.
     if fg.width > target_width:
         width_ratio = target_width / fg.width
@@ -36,11 +68,13 @@ def overlay_centered(bg, fg):
 
         fg = fg.resize(new_size, Image.LANCZOS)
 
-    x = (bg.width - fg.width) // 2
-    y = (bg.height - fg.height) // 2
+    fg_with_shadow = add_shadow(fg)  # Add shadow to the resized foreground
+
+    x = (bg.width - fg_with_shadow.width) // 2
+    y = (bg.height - fg_with_shadow.height) // 2
 
     merged = bg.copy()
-    merged.paste(fg, (x, y), fg)
+    merged.paste(fg_with_shadow, (x, y), fg_with_shadow)
     return merged
 
 
