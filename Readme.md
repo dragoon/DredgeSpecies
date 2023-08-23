@@ -76,7 +76,7 @@ This is the most difficult part. I had imagined the following specifications:
 * Liner or Blank
 * Yellowish paper
 
-This turned out to be extremely difficult. Currently, I have ordered this one from Amazon:
+This turned out to be extremely difficult. For trying things out, I have ordered this one from Amazon (in package of 3):
 <p align="middle">
     <img src="readme_images/amazon_40sheet.jpg" width="300">
 </p>
