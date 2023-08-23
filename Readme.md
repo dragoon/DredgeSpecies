@@ -1,0 +1,50 @@
+## Dredge Fish Species Notebook
+![Dredge Main](readme_images/dredge_promo.png)
+
+### Description
+The process to create a physical version of the digital Fish Species Notebook from [Dredge](https://www.dredge.game/)
+
+### Image Extraction
+![Fish Notebook](readme_images/fish_notebook_screenshot.png)
+The Notebook is a single PDF file, so we will use PDF image extractor to get specific fish images out of it:
+```shell
+./extract_images.sh fish.pdf dredge
+```
+The script uses ``pdfimages`` tools and ``ImageMagick`` to apply transparent mask back to images.
+As a result, you will get one folder full of different images.
+You will notice that fish images
+Next, create the following directory structure:
+```
+📂 assets
+├── 📂 aberration_bg
+│   ├── horizontal_rect_abb.png
+│   ├── square_abb.png
+│   └── vertical_rect_abb.png
+├── 📂 photos_aberrations
+│   ├── image-xxx.png
+│   └── ...
+├── 📂 normal_bg
+│   ├── horizontal_rect_normal.png
+│   ├── square_normal.png
+│   └── vertical_rect_normal.png
+├── 📂 photos_normal
+│   ├── image-xxx.png
+│   └── ...
+```
+I have already added background directories to this repo:
+
+<p align="middle">
+<img width="220" height="220" src="assets/aberration_bg/square_abb.png"/>
+<img width="220" height="220" src="assets/normal_bg/square_normal.png"/>
+</p>
+
+The fish photos are not in this repo for potential copyright reasons.
+So you need to manually move extracted fish images to their respective folders.
+
+### Background Matching
+Next, I prepared a python script that will accept background and raw image photo directories, and match the fish with background using the closest aspect ratio (it's not perfect but good enough): 
+
+```shell
+python3 dredge_bg_matcher.py assets/normal_bg assets/photos_normal normal_fish_with_bg
+python3 dredge_bg_matcher.py assets/aberration_bg assets/photos_aberrations abb_fish_with_bg
+```

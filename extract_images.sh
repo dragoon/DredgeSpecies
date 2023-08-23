@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+# based on https://gist.github.com/bendavis78/ed22a974c2b4534305eabb2522956359
 usage() {
     echo "Usage: $(basename $0) fish_species.pdf dest_dir";
 }
