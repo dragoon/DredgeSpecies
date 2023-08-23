@@ -3,7 +3,7 @@ from PIL import Image, ImageFilter, ImageColor
 import os
 
 
-def add_shadow(input_image, offset=(9, 11), shadow_color="#111111A0"):
+def add_shadow(input_image, offset=(8, 8), shadow_color="#111111AA"):
     """Add a shadow to an image with a transparent background."""
 
     # Ensure the image has an alpha layer
@@ -19,7 +19,7 @@ def add_shadow(input_image, offset=(9, 11), shadow_color="#111111A0"):
 
     # Create a shadow mask using the alpha channel of the image
     alpha = img_with_alpha.split()[3]
-    blurred_shadow = alpha.filter(ImageFilter.GaussianBlur(radius=1))
+    blurred_shadow = alpha.filter(ImageFilter.GaussianBlur(radius=0))
     # Convert shadow_color from string to tuple
     r, g, b = ImageColor.getcolor(shadow_color, "RGB")
     shadow_color_rgba = (r, g, b, 0)  # Append 0 alpha
