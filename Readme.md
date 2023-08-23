@@ -34,17 +34,28 @@ Next, create the following directory structure:
 I have already added background directories to this repo:
 
 <p align="middle">
-<img width="220" height="220" src="assets/aberration_bg/square_abb.png"/>
-<img width="220" height="220" src="assets/normal_bg/square_normal.png"/>
+<img width="320" height="320" src="assets/aberration_bg/square_abb.png"/>
+<img width="320" height="320" src="assets/normal_bg/square_normal.png"/>
 </p>
 
 The fish photos are not in this repo for potential copyright reasons.
+Just added one code image as an example:
+<p align="middle">
+<img width="320" height="320" src="assets/normal/image-178.png"/>
+<img width="320" height="320" src="assets/aberrations/image-176.png"/>
+</p>
 So you need to manually move extracted fish images to their respective folders.
 
 ### Background Matching
 Next, I prepared a python script that will accept background and raw image photo directories, and match the fish with background using the closest aspect ratio (it's not perfect but good enough): 
 
 ```shell
-python3 dredge_bg_matcher.py assets/normal_bg assets/photos_normal normal_fish_with_bg
-python3 dredge_bg_matcher.py assets/aberration_bg assets/photos_aberrations abb_fish_with_bg
+python3 dredge_bg_matcher.py assets/normal_bg assets/normal normal_fish_with_bg
+python3 dredge_bg_matcher.py assets/aberration_bg assets/aberrations abb_fish_with_bg
 ```
+
+After that, you should see the matched and combines photos in the output directories:
+<p align="middle">
+<img width="320" height="320" src="assets/normal_fish_with_bg/image-178.png"/>
+<img width="320" height="320" src="assets/abb_fish_with_bg/image-176.png"/>
+</p>
