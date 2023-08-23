@@ -39,7 +39,7 @@ I have already added background directories to this repo:
 </p>
 
 The fish photos are not in this repo for potential copyright reasons.
-Just added one code image as an example:
+Just added a meek cod as an example:
 <p align="middle">
 <img width="320" height="320" src="assets/normal/image-178.png"/>
 <img width="320" height="320" src="assets/aberrations/image-176.png"/>
