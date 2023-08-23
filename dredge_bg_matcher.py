@@ -57,19 +57,14 @@ def best_matching_background(bg_images, fg):
 
 
 def overlay_centered(bg, fg):
-    # Calculate the ratio to fit the foreground width to (bg.width - 90)
-    target_width = bg.width - 90
+    # Calculate the ratio to fit the foreground width
+    target_width = bg.width - 60
+    target_height = bg.height - 60
 
     # Only scale down if the foreground image's width is larger than target_width.
-    if fg.width > target_width:
-        width_ratio = target_width / fg.width
-        new_size = (int(fg.width * width_ratio), int(fg.height * width_ratio))
-
-        # Ensure the new height doesn't exceed the background height.
-        # If it does, adjust the ratio accordingly and recalculate.
-        if new_size[1] > bg.height:
-            height_ratio = bg.height / fg.height
-            new_size = (int(fg.width * height_ratio), int(fg.height * height_ratio))
+    if fg.width > target_width or fg.height > target_height:
+        ratio = min(target_width / fg.width, target_height / fg.height)
+        new_size = (int(fg.width * ratio), int(fg.height * ratio))
 
         fg = fg.resize(new_size, Image.LANCZOS)
 
