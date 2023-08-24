@@ -78,8 +78,13 @@ After that, you should see the matched and combines photos in the output directo
 
 ### Photo Printing
 I have used my local photo printing shops (in Switzerland: Migros or ALDI Photos) with the following specs:
-xxx
-Results:
+* Square photos: 9cm for most, 10 cm for Grouper and Gnashing Perch
+* Rectangle: 9x13cm
+* Rare fish Close-ups: 10x15cm
+
+Results: XX
+
+Total budget: XX$
 
 ### Notebook
 This is the most difficult part. I had imagined the following specifications:
