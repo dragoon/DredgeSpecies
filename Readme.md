@@ -56,13 +56,20 @@ Next, I prepared a python script that will accept background and raw image photo
 python3 dredge_bg_matcher.py assets/normal_bg assets/normal normal_fish_with_bg
 python3 dredge_bg_matcher.py assets/aberration_bg assets/aberrations abb_fish_with_bg
 ```
-The script is not perfect and some species you will have to manually paste onto the correct background and adjust the size,
-but it works for the majority of species.
+The script is not perfect, and I have added a custom background matching for some images based on their extracted order sequence,
+so you might have to tweak it a bit if you get different results.
 
 #### Fish Shadow
 One thing I noticed is that the extracted images do not have shadow as in the PDF, so I added a method to generate a shadow to this script as well.
-I think it matches the original one pretty well.
+I think it matches the original one pretty well:
+<p align="middle">
+<img width="254" height="145" alt="original shadow" src="readme_images/orig_shadow.png"/>
+<img width="254" height="145" alt="my shadow" src="readme_images/my_shadow.png"/>
+</p>
+(Left - original, Right - My shadow)
 
+
+#### Final Results
 After that, you should see the matched and combines photos in the output directories:
 <p align="middle">
 <img width="320" height="320" src="assets/normal_fish_with_bg/image-178.png"/>
