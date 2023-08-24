@@ -3,7 +3,7 @@ from PIL import Image, ImageFilter, ImageColor
 import os
 
 
-def add_shadow(input_image, offset=(8, 8), shadow_color="#111111AD"):
+def add_shadow(input_image, offset=(8, 8), shadow_color="#050505AA"):
     """Add a shadow to an image with a transparent background."""
 
     # Ensure the image has an alpha layer
