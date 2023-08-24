@@ -132,4 +132,5 @@ env.bak/
 venv.bak/
 
 assets/**/*.png
+fish.pdf
 
