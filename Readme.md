@@ -63,10 +63,10 @@ so you might have to tweak it a bit if you get different results.
 One thing I noticed is that the extracted images do not have shadow as in the PDF, so I added a method to generate a shadow to this script as well.
 I think it matches the original one pretty well:
 <p align="middle">
-<img width="254" height="145" alt="original shadow" src="readme_images/orig_shadow.png"/>
-<img width="254" height="145" alt="my shadow" src="readme_images/my_shadow.png"/>
+<img width="300" height="168" alt="original shadow" src="readme_images/orig_shadow.png"/>
+<img width="284" height="168" alt="my shadow" src="readme_images/my_shadow.png"/>
 </p>
-(Left - original, Right - My shadow)
+<p align="middle">Left - original, Right - My shadow</p>
 
 
 #### Final Results
