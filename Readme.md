@@ -96,12 +96,11 @@ This is the most difficult part. I had imagined the following specifications:
 * Liner or Blank
 * Yellowish paper
 
-This turned out to be extremely difficult. For trying things out, I have ordered this one from Amazon (in package of 3):
+This turned out to be extremely difficult. For trying things out, I have ordered [this one from Amazon](https://www.amazon.de/-/en/gp/product/B09FF7J2B3/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1) (in package of 3):
 <p align="middle">
+    <img src="readme_images/amazon_40sheet1.jpg" width="300">
     <img src="readme_images/amazon_40sheet.jpg" width="300">
 </p>
-
-https://www.amazon.de/-/en/gp/product/B09FF7J2B3/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&psc=1
 
 The cover is black and soft, but other parameters match well.
 
