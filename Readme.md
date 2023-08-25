@@ -83,6 +83,7 @@ I have used my local photo printing shops (in Switzerland: Migros or ALDI Photos
 * Rare fish Close-ups: 10x15cm
 
 First Results:
+
 ![Fish Sheet First Results](readme_images/fish_sheet_draft.jpg)
 
 Total budget: XX$
