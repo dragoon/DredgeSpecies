@@ -104,5 +104,8 @@ This turned out to be extremely difficult. For trying things out, I have ordered
 
 The cover is black and soft, but other parameters match well.
 
-Otherwise I am considering this one from Etsy:
-https://www.etsy.com/listing/1158061119/personalised-a4-notebook-printed-with?ref=cart
+Otherwise I am considering a [Personalised A4 Notebook from Etsy](https://www.etsy.com/listing/1158061119/personalised-a4-notebook-printed-with?ref=cart):
+<p align="middle">
+    <img src="readme_images/etsy1.avif" width="300">
+    <img src="readme_images/etsy2.avif" width="300">
+</p>
